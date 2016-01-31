@@ -23,6 +23,9 @@ def get_odometer(c, car):
             odometer = int(d["odometer"])
     return odometer
     
+def miles_to_km(miles=0):
+    return int(miles * 1.609)
+
 def exit_if_logininfo_not_set():
     print "One or both environment variables TESLA_EMAIL or  TESLA_PASSWORD are not set."
     print "The must be set in the shell you are running from, e.g."
@@ -44,4 +47,4 @@ except:
 MY_CAR="The Batmobile"
 
 c = establish_connection()
-print "{} {} km".format(datetime.datetime.now().isoformat(), int(get_odometer(c, MY_CAR) * 1.609))
+print "{} {} km".format(datetime.datetime.now().isoformat(), miles_to_km(get_odometer(c, MY_CAR)) )
