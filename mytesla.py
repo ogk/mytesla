@@ -47,4 +47,4 @@ except:
 MY_CAR="The Batmobile"
 
 c = establish_connection()
-print "{} {} km".format(datetime.datetime.now().isoformat(), miles_to_km(get_odometer(c, MY_CAR)) )
+print "{0} {1} km".format(datetime.datetime.now().isoformat(), miles_to_km(get_odometer(c, MY_CAR)) )
