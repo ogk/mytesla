@@ -44,7 +44,8 @@ try:
 except:
     exit_if_logininfo_not_set()
 
-MY_CAR="The Batmobile"
+MY_CAR="K-2SO"
 
 c = establish_connection()
 print "{0} {1} km".format(datetime.datetime.now().isoformat(), miles_to_km(get_odometer(c, MY_CAR)) )
+

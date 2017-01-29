@@ -37,6 +37,9 @@ Usage() {
 # Hovedprogram
 #===========================================================
 
+# cd to the directory of this script
+cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
 TEMPFILE_LOG=$(mktemp)
 TEMPFILE_OUTPUT=$(mktemp)
 
